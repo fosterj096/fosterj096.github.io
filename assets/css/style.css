@@ -796,19 +796,19 @@ section {
   color: #888;
 }
 #contact .social-links {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 #contact .social-links a {
-  font-size: 18px;
+  font-size: 48px;
   background: #fff;
   color: #10a000;
-  padding: 20px 0;
-  margin-right: 4px;
+  padding: 2px 0;
+  margin-right: 8px;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  border: 1px solid #1dc8cd;
+  border: 0px solid #1dc8cd;
 
 
 }
