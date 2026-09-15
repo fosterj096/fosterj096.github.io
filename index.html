@@ -2,360 +2,543 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Justin's Website</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Justin Foster | Software Engineer</title>
+    <meta name="description" content="Justin Foster is a software engineer in St. Louis working on enterprise C#/.NET applications, Azure infrastructure, and CI/CD.">
+    <meta name="keywords" content="Justin Foster, software engineer, C#, .NET, ASP.NET Core, Razor Pages, Azure, Azure DevOps, St. Louis">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Open Graph: controls the preview card when the link is pasted into LinkedIn, Slack, email, etc. -->
+    <meta property="og:title" content="Justin Foster | Software Engineer">
+    <meta property="og:description" content="C#/.NET, Azure, and CI/CD. Résumé, experience, and contact info.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fosterj096.github.io/">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Avilon - v4.6.1
-  * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        #hero {
+            background: linear-gradient(135deg, #0f2f3a 0%, #146c78 55%, #1dc8cd 100%);
+        }
+
+            #hero .hero-text {
+                top: 0;
+                height: 100%;
+            }
+
+            #hero h2 {
+                font-weight: 500;
+            }
+
+            #hero p {
+                max-width: 640px;
+            }
+
+            #hero .btn-get-started {
+                margin: 0 6px 10px;
+            }
+
+        /* About */
+        #about .about-img {
+            height: auto;
+        }
+
+            #about .about-img img {
+                width: 100%;
+                max-width: 460px;
+                aspect-ratio: 3 / 4;
+                object-fit: cover;
+                border-radius: 6px;
+                display: block;
+                margin: 0 auto;
+            }
+
+        #about .content {
+            padding-top: 10px;
+        }
+
+            #about .content h2 {
+                font-size: 26px;
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+
+            #about .content ul li {
+                padding-bottom: 12px;
+                display: flex;
+                gap: 6px;
+            }
+
+        /* Shared section spacing */
+        .page-section {
+            padding: 70px 0;
+            overflow: hidden;
+        }
+
+            .page-section .section-description {
+                max-width: 680px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        /* Experience */
+        .job {
+            max-width: 860px;
+            margin: 0 auto 44px;
+        }
+
+            .job:last-child {
+                margin-bottom: 0;
+            }
+
+        .job-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 4px 16px;
+            border-bottom: 2px solid #1dc8cd;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+            .job-header h3 {
+                font-size: 21px;
+                font-weight: 500;
+                margin: 0;
+                color: #222;
+            }
+
+            .job-header .org {
+                display: block;
+                font-size: 15px;
+                color: #555;
+                margin-top: 2px;
+            }
+
+            .job-header .dates {
+                font-size: 14px;
+                color: #666;
+                white-space: nowrap;
+            }
+
+        .job h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #146c78;
+            margin: 18px 0 6px;
+        }
+
+        .job ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .job li {
+            line-height: 26px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        /* Skills */
+        .skill-group {
+            margin-bottom: 24px;
+        }
+
+            .skill-group h3 {
+                font-size: 17px;
+                font-weight: 500;
+                color: #222;
+                margin-bottom: 10px;
+            }
+
+        .skill-tags {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+            .skill-tags li {
+                background: #fff;
+                border: 1px solid #b9e3e4;
+                border-radius: 4px;
+                padding: 4px 10px;
+                font-size: 14px;
+                color: #333;
+            }
+
+        /* Education */
+        .edu {
+            text-align: center;
+        }
+
+            .edu h3 {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+
+            .edu p {
+                color: #555;
+                margin: 0;
+            }
+
+        /* Contact */
+        #contact .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #contact .contact-list li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 14px;
+                font-size: 16px;
+            }
+
+            #contact .contact-list i {
+                font-size: 22px;
+                color: #1dc8cd;
+            }
+
+            #contact .contact-list a {
+                color: #146c78;
+            }
+
+                #contact .contact-list a:hover {
+                    text-decoration: underline;
+                }
+
+        a:focus-visible, .btn-get-started:focus-visible {
+            outline: 3px solid #55fabe;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            #hero {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+
+    <!-- =======================================================
+    * Template Name: Avilon - v4.6.1
+    * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container d-flex justify-content-between align-items-center">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex justify-content-between align-items-center">
 
-      <div id="logo">
-        <h1><a href="index.html">Justin</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a> -->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#advanced-features">Education</a></li>
-          <li><a class="nav-link scrollto" href="#about1">Projects</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-
-    <div class="hero-text" data-aos="zoom-out">
-      <h2>Welcome to Justin's Website</h2>
-      <p>Click below to get started!</p>
-      <a href="#about" class="btn-get-started scrollto">My Summary</a>
-      <a href="Justin_Foster_Resume.pdf" class="btn-get-started scrollto">My Resume</a>
-    </div>
-
-
-  </section><!-- End Hero Section -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="section-bg">
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="section-header">
-          <h3 class="section-title">About Me</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">
-            My name is Justin Foster, I am a student at UMKC. <br>
-          
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 about-img" data-aos="fade-right" dat-aos-delay="100">
-            <img src="IMG-4875.JPG" width=700 height=800 alt="I don't like taking pictures of myself :( ">
-          </div>
-
-          <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">
-            <h2>Welcome to my professional summary!</h2>
-
-            <p>
-              I am currently a student at UMKC, graduating Fall 2022. I will be receiving my
-              Bachelor's of Science in Computer Science. 
-            </p>
-
-            <ul>
-              <li><i class="bi bi-check-circle"></i> I am most comfortable with Object Oriented Programming - C, C++, and Java</li>
-              <li><i class="bi bi-check-circle"></i> Experience with SQL - MySQL11, MySQL Workbench</li>
-              <li><i class="bi bi-check-circle"></i> Experience with multiple frameworks such as React, Angular, and Blazor</li>
-              <li><i class="bi bi-check-circle"></i> Good communication and teamwork skills.</li>
-              <li><i class="bi bi-check-circle"></i> I started off as student in Mechanical Engineering, but after learning more about Computer Science I decided to pursue a degree in that instead!</li>
-              <li><i class="bi bi-check-circle"></i> Loves to climb a good tree</li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Advanced Featuress Section ======= -->
-    <section id="advanced-features">
-
-      <div class="features-row section-bg" data-aos="fade-up">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="CSPhoto.jpg" height=500 width=750 alt="">
-              <div>
-                <h2>My Education Summary and Background</h2>
-                <h3>I have taken almost all core CS classes for my degree, and serveral math classes up to Calculus 3 and Linear Algebra. Here is a list of some of the major classes I've taken:</h3>
-                <p>CS449/CS451 - Software Engineering</p>
-                <p>CS461 - Introduction to Artificial Intelligence</p>
-                <p>CS470 - Database Management</p>
-                <p>CS441 - Programming Languages</p>
-                <p>CS303 - Data Structures</p>
-                <p>CS404 - Algorithms and Complexity</p>
-              </div>
+            <div id="logo">
+                <h1><a href="index.html">Justin Foster</a></h1>
             </div>
-          </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
+                    <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
+                    <li><a class="nav-link scrollto" href="#education">Education</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="Justin_Foster_Resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
         </div>
-      </div>
+    </header>
+    <!-- End Header -->
 
-      </section>
-    <!-- End Advanced Featuress Section -->
-
-    <!-- ======= Team/Abou1 Section ======= -->
-
-    <section id="about1" class="section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h3 class="section-title">Projects</h3>
-          <span class="section-divider"></span>
-          <div class="row">
-
-          <div class="col-lg-6 content" data-aos="fade-left" dat-aos-delay="100">
-            <h2>An Overview of My projects</h2>
-
-            <p>
-              A list of more important projects that I have completed during my curriculum at UMKC and in my own freetime. These can all be seen at
-              <a href="https://github.com/fosterj096"> this </a> link!
-            </p>
-
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Project sponsored by Commerce Bank to build a website that can handle bank transactions. Created using Blazor C# Web Development connected
-              to a SQL database for transaction data.</li>
-              <li><i class="bi bi-check-circle"></i> An artificial intellgence system used to determine if given tweet was tweeted by a Democrat or a Republican. Built using Python with
-              Tensorflow's Keras library.</li>
-              <li><i class="bi bi-check-circle"></i> Implented a simple Python GUI for access to a SQL database full of student information.</li>
-              <li><i class="bi bi-check-circle"></i> Python script using Beautiful Soup's webscraping to allow a user to input their username in League of Legends and allow them 
-              to see data about themselves.</li>
-            </ul>
-
-          </div>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-text" data-aos="zoom-out">
+            <h2>Justin Foster</h2>
+            <p>Software engineer building and running enterprise C#/.NET applications on Azure.</p>
+            <div>
+                <a href="#experience" class="btn-get-started scrollto">View experience</a>
+            </div>
         </div>
-      </div>
     </section>
+    
+    <!-- End Hero Section -->
 
-    <!-- End Team Section -->
+    <main id="main">
 
+        <!-- ======= About Section ======= -->
+        <section id="about" class="section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 class="section-title">About Me</h3>
+                    <span class="section-divider"></span>
+                </div>
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq">
-      <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 about-img mb-4 mb-lg-0">
+                        <img src="IMG-4875.JPG" alt="Photo of Justin Foster" loading="lazy">
+                    </div>
 
-        <div class="section-header">
-          <h3 class="section-title">Frequently Asked Questions</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">Some questions that a potential employer may have while viewing this site...</p>
-        </div>
+                    <div class="col-lg-7 content">
+                        <h2>Software Engineer - St. Louis, MO</h2>
+                        <p>
+                            I'm the primary technical owner of the enterprise .NET platform that runs Rheem Manufacturing's parts
+                            operations. I led its move from on-premises servers to Azure, built its authentication and API layer, and
+                            mentor the client-side engineers who work on it. Before software, I spent nearly seven years in the
+                            U.S. Air National Guard.
+                        </p>
 
-        <ul class="faq-list">
-
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What work experience do you have? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                I was in the Air Force for almost 7 years as a Aerospace Ground Engineer, which involved countless hours of maintenence, schooling, and training. I have trained others and graduated
-                top of my class in Technical School. I have als worked as a CAD Designer at Tukuh Technologies for roughly a year. I also helped some employees here with writing scripts to help
-                 ease the burden of the workload.
-              </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i><span>Sole engineer on a full on-prem-to-Azure migration, including the consolidation of multiple on-prem databases to a single Azure SQL database.</span></li>
+                            <li><i class="bi bi-check-circle"></i><span>Replaced 100+ manually run .NET 4.8 console apps with .NET 8.0 Versions - scheduled and logged via ADO pipelines.</span></li>
+                            <li><i class="bi bi-check-circle"></i><span>Built warehouse receiving and fulfillment systems that has processed thousands of orders and millions of parts.</span></li>
+                            <li><i class="bi bi-check-circle"></i><span>Cut load times 30–40% on key pages by removing redundant database calls and adding caching mechanisms.</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </li>
+        </section>
+        
+        <!-- End About Section -->
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What software/languages do you feel most comfortable with? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                I am most familiar and comfortable with Object Oriented languages, such as C++, C#, and Java. I also have experience with Python, BASH, HTML/CSS, and Javascript. I have used similar
-                software such as MySQL, React, Blazor, and Angular.
-              </p>
+        <!-- ======= Experience Section ======= -->
+        <section id="experience" class="page-section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 class="section-title">Experience</h3>
+                    <span class="section-divider"></span>
+                </div>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>
+                            Software Engineer 2
+                            <span class="org">Simplicity Software, contracted to Rheem Manufacturing</span>
+                        </h3>
+                        <span class="dates">Feb 2023 – Present</span>
+                    </div>
+
+                    <h4>Cloud migration and infrastructure</h4>
+                    <ul>
+                        <li>Migrated the platform from on-premises servers to Azure as the sole engineer. Consolidated 5 production databases into one to work within Azure SQL's lack of cross-database queries, rewriting every dependent C# call and stored procedure before cutover.</li>
+                        <li>Built a table-driven sync tool that kept Azure SQL current with on-prem data nightly during the phased migration.</li>
+                        <li>Worked with infrastructure and network teams to stand up DEV and PROD environments in Azure, and moved asset storage from AWS S3 to Azure Blob Storage.</li>
+                        <li>Enabled horizontal scaling with centralized key storage and SQL-backed distributed caching, so sessions survive restarts, deployments, and failover.</li>
+                    </ul>
+
+                    <h4>CI/CD and automation</h4>
+                    <ul>
+                        <li>Consolidated 100+ standalone .NET console apps into one parameter-driven .NET project, run by ADO Pipeline templates.</li>
+                        <li>Wrote the multi-stage YAML pipelines that deploy the Web Project, API, and Console Projects to dev and prod, and set up the self-hosted build agents they run on.</li>
+                    </ul>
+
+                    <h4>Authentication, APIs, and modernization</h4>
+                    <ul>
+                        <li>Rebuilt authentication to support three sign-in paths, including Microsoft Entra ID single sign-on, and own the API layer that integrates with Rheem's distributor platform.</li>
+                        <li>Modernizing a codebase that dates to 2008: converted legacy VB applications to C# (several rebuilt as Razor Pages) and currently leading the API move to .NET 8/9.</li>
+                        <li>Own the warehouse's daily systems: receiving and fulfillment, shipping label generation, and a Chart.js reporting dashboard.</li>
+                    </ul>
+
+                    <h4>Leadership</h4>
+                    <ul>
+                        <li>Primary technical contact for the platform across Rheem, working with product managers, warehouse managers, and IT leadership.</li>
+                        <li>Technical lead for two client-side engineers: plan work in Azure DevOps Boards, review all pull requests, and run walkthroughs on architecture and deployment.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>
+                            Project Engineer
+                            <span class="org">TransPerfect</span>
+                        </h3>
+                        <span class="dates">Sep 2022 – Feb 2023</span>
+                    </div>
+                    <ul>
+                        <li>Wrote Python automation scripts that tested voice-assistant response quality on mobile devices.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-header">
+                        <h3>
+                            Aerospace Ground Equipment Technician
+                            <span class="org">U.S. Air National Guard</span>
+                        </h3>
+                        <span class="dates">Sep 2014 – Mar 2021</span>
+                    </div>
+                    <ul>
+                        <li>Maintained and repaired ground support equipment, including diesel generators and mobile lighting units, while attending school full-time.</li>
+                    </ul>
+                </article>
             </div>
-          </li>
+        </section>
+    
+        <!-- End Experience Section -->
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What do you look for in a potential employer?? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                I would like an employer who is fair and understands that workers are humans and should be treated as such. 
-              </p>
-            </div>
-          </li>
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="page-section section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 class="section-title">Skills</h3>
+                    <span class="section-divider"></span>
+                </div>
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What are your strengths? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                I would say my strengths are my ability to research and adapt to new situations. Being in Computer Science you have to learn a lot of different concepts and languages that are sometimes
-                not too similar! I also have strong social skills in regards to communcation and teamwork, thanks to the Air Force.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">What's your favorite food? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                A nicely seared steak with a loaded potato. Or pizza. Or sushi. Or pesto on anything.
-              </p>
-            </div>
-          </li>
-
-
-        </ul>
-
-      </div>
-    </section>
-    <!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-4">
-            <div class="contact-about">
-              <h3>Justin</h3>
-              <p>Contact me with any oppurtunies you may have!</p>
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="info">
-              <div>
-                <i class="bi bi-geo-alt"></i>
-                <p>West Plaza<br>Kansas City, MO 64111</p>
-              </div>
-
-              <div>
-                <i class="bi bi-envelope"></i>
-                <p>fosterj096@gmail.com</p>
-              </div>
-
-              <div>
-                <i class="bi bi-phone"></i>
-                <p>+1 816 111 1111</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-5 col-md-8">
-            <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
-                  <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                  </div>
-                  <div class="form-group col-lg-6 mt-3 mt-lg-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                  </div>
+                    <div class="col-lg-4 skill-group">
+                        <h3>Languages and frameworks</h3>
+                        <ul class="skill-tags">
+                            <li>C#</li>
+                            <li>Java</li>
+                            <li>Go</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>ASP.NET Core Razor Pages</li>
+                            <li>Entity Framework Core</li>
+                            <li>.NET Framework → .NET 8/9</li>
+                            <li>SQL / T-SQL</li>
+                            <li>VB.NET / VB6</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 skill-group">
+                        <h3>Cloud and DevOps</h3>
+                        <ul class="skill-tags">
+                            <li>Azure SQL</li>
+                            <li>Azure Blob Storage</li>
+                            <li>Docker</li>
+                            <li>Terraform</li>
+                            <li>Azure VMs</li>
+                            <li>IIS</li>
+                            <li>AWS S3</li>
+                            <li>Azure DevOps Pipelines</li>
+                            <li>YAML CI/CD</li>
+                            <li>Self-hosted build agents</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 skill-group">
+                        <h3>Architecture and auth</h3>
+                        <ul class="skill-tags">
+                            <li>Dependency Injection</li>
+                            <li>Custom Middleware</li>
+                            <li>Distributed Caching</li>
+                            <li>Background Jobs</li>
+                            <li>Structured Logging</li>
+                            <li>ASP.NET Identity</li>
+                            <li>Microsoft Entra ID</li>
+                            <li>OAuth2 / JWT Issuance</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
             </div>
-          </div>
+        </section>
+        <!-- End Skills Section -->
 
+        <!-- ======= Education Section ======= -->
+        <section id="education" class="page-section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 class="section-title">Education</h3>
+                    <span class="section-divider"></span>
+                </div>
+                <div class="edu">
+                    <h3>B.S. in Computer Science</h3>
+                    <p>University of Missouri–Kansas City, 2022</p>
+                </div>
+            </div>
+        </section>
+        <!-- End Education Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="contact-about">
+                            <h3>Contact</h3>
+                            <p>Email is the best way to reach me. My résumé has my full contact details.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <ul class="contact-list">
+                            <li><i class="bi bi-envelope"></i><a href="mailto:fosterj096@gmail.com">fosterj096@gmail.com</a></li>
+                            <li><i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/justin-foster-904805199" target="_blank" rel="noopener">linkedin.com/in/justin-foster-904805199</a></li>
+                            <li><i class="bi bi-github"></i><a href="https://github.com/fosterj096" target="_blank" rel="noopener">github.com/fosterj096</a></li>
+                            <li><i class="bi bi-geo-alt"></i><span>St. Louis, MO</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-lg-start text-center">
+                    <div class="copyright">
+                        &copy; <span id="year">2026</span> Justin Foster
+                    </div>
+                    <div class="credits">
+                        <!-- The free BootstrapMade license requires this credit link to stay: https://bootstrapmade.com/license/ -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+                        <a href="#hero" class="scrollto">Home</a>
+                        <a href="#experience" class="scrollto">Experience</a>
+                        <a href="#contact" class="scrollto">Contact</a>
+                    </nav>
+                </div>
+            </div>
         </div>
+    </footer><!-- End Footer -->
 
-      </div>
-    </section><!-- End Contact Section -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-chevron-up"></i></a>
 
-  </main><!-- End #main -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- main.js calls GLightbox() unconditionally, so this must stay loaded -->
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 text-lg-start text-center">
-          <div class="copyright">
-            &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
-          -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
-            <a href="#about" class="scrollto">About</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 
