@@ -1,1 +1,1 @@
-Site made for UMKC's CS90WD course.
+Personal professional site.
